@@ -26,3 +26,10 @@ steps:
     repository: 'aswini2012 / azuredemo'
     command: 'buildAndPush'
     Dockerfile: '**/AzureDockerfile'
+- task: ECRPushImage@1
+  inputs:
+    awsCredentials: 'Gracia'
+    regionName: 'us-east-1'
+    imageSource: 'imagename'
+    sourceImageName: 'myimage'
+    repositoryName: 'myiamge'
